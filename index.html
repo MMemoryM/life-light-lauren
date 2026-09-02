@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>August by Lauren | MyMemoryMe</title>
+  <!-- Google Fonts: Jost (Modern Humanist Headers) & Libre Baskerville (Warm Editorial Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ------------------------------------------------------------------
+       1. MORNING SOLARIUM TOKENS & VISIBLE SUNLIGHT GLOW
+       ------------------------------------------------------------------ */
+    :root {
+      --bg-linen: #FCFAF7;
+      --glow-primrose-core: #FFF5D6;
+      --glow-primrose-outer: #FFFDF0;
+      --glow-dawn-blue: rgba(215, 228, 240, 0.4);
+      --text-charcoal: #1C1A1A;
+      --hairline-stone: #D8D5CE;
+      --accent-gold: #C5A059;
+      --shadow-sepia: rgba(45, 43, 42, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-linen);
+      /* Morning Solarium Radial Lighting Gradient */
+      background-image: 
+        radial-gradient(circle at 95% 2%, var(--glow-primrose-core) 0%, var(--glow-primrose-outer) 35%, transparent 70%),
+        radial-gradient(circle at 5% 98%, var(--glow-dawn-blue) 0%, transparent 55%);
+      background-attachment: fixed;
+      color: var(--text-charcoal);
+      font-family: "Libre Baskerville", "Baskerville", "Georgia", serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+      padding: 70px 20px 100px 20px;
+    }
+
+    /* ------------------------------------------------------------------
+       2. CANVAS CONTAINER & SPATIAL FLOW (NO HORIZONTAL LINES)
+       ------------------------------------------------------------------ */
+    .life-light-container {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Header & Personalisation */
+    .edition-stamp {
+      font-family: "Jost", sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 12px;
+    }
+
+    .main-title {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+
+    /* Opening Lead Stanza */
+    .lead-stanza {
+      font-size: 1.05rem;
+      line-height: 2.1;
+      font-style: italic;
+      font-weight: 400;
+      max-width: 440px;
+      opacity: 0.9;
+      margin-bottom: 85px;
+    }
+
+    /* BOLDER & LARGER SECTION HEADINGS */
+    .section-header-bold {
+      font-family: "Jost", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-charcoal);
+      margin-bottom: 45px;
+      opacity: 0.95;
+    }
+
+    /* ------------------------------------------------------------------
+       3. APERTURE FRAMES & MICRO-SCALE VARIATIONS
+       ------------------------------------------------------------------ */
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 65px;
+      width: 100%;
+    }
+
+    .grid-item.align-center { align-items: center; }
+    .grid-item.align-left { align-items: flex-start; }
+    .grid-item.align-right { align-items: flex-end; }
+
+    .aperture-frame {
+      background-color: #FFFFFF;
+      padding: 12px;
+      border: 1px solid var(--bg-linen);
+      /* 135° Directional Drop Shadow Physics */
+      box-shadow: 2px 4px 12px var(--shadow-sepia);
+    }
+
+    /* Micro-Scale Variations */
+    .frame-hero { width: 100%; }
+    .frame-portrait { width: 80%; }
+    .frame-square { width: 75%; }
+    .frame-rainbow-hero { 
+      width: 100%; 
+      padding: 8px;
+    }
+
+    .aperture-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .tagline {
+      font-size: 0.92rem;
+      font-style: italic;
+      margin-top: 14px;
+      opacity: 0.85;
+      max-width: 85%;
+      line-height: 1.5;
+    }
+
+    /* ------------------------------------------------------------------
+       4. ELEVATED THREADS SECTION (POSITIONED ABOVE PROSE)
+       ------------------------------------------------------------------ */
+    .threads-block {
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 85px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .framed-box {
+      width: 100%;
+      max-width: 480px;
+      border-top: 1px solid var(--hairline-stone);
+      border-bottom: 1px solid var(--hairline-stone);
+      padding: 30px 15px;
+      margin-top: 35px;
+      position: relative;
+    }
+
+    .star-accent {
+      font-size: 0.7rem;
+      color: var(--accent-gold);
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--bg-linen);
+      padding: 0 14px;
+      opacity: 0.85;
+    }
+
+    .framed-words {
+      font-family: "Jost", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--text-charcoal);
+      opacity: 0.9;
+      word-spacing: 0.25em;
+    }
+
+    /* ------------------------------------------------------------------
+       5. EDITORIAL PROSE & POETIC CLOSING
+       ------------------------------------------------------------------ */
+    .editorial-prose {
+      font-size: 0.98rem;
+      line-height: 1.95;
+      font-weight: 400;
+      text-align: left;
+      padding: 0 10px;
+      margin-bottom: 85px;
+    }
+
+    .editorial-prose p { 
+      margin-bottom: 24px; 
+    }
+
+    .poetic-closing {
+      font-size: 1.02rem;
+      line-height: 2.1;
+      font-weight: 400;
+      text-align: center;
+      max-width: 460px;
+    }
+
+    .poetic-stanza {
+      margin-bottom: 30px;
+    }
+
+    .gold-dot-pause {
+      color: var(--accent-gold);
+      font-size: 0.8rem;
+      margin: 40px 0;
+      opacity: 0.85;
+    }
+
+    .closing-question-large {
+      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 400;
+      opacity: 0.95;
+    }
+
+    /* ------------------------------------------------------------------
+       6. REFINED ARCHIVAL FOOTER (THREE-POINT FRAME)
+       ------------------------------------------------------------------ */
+    .archival-footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      margin-top: 80px;
+      font-family: "Jost", sans-serif;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      opacity: 0.45;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="life-light-container">
+
+    <!-- REFINED HEADER -->
+    <div class="edition-stamp">LIFE-LIGHT BY LAUREN</div>
+    <h1 class="main-title">AUGUST 2026</h1>
+
+    <!-- OPENING SCRIPT -->
+    <div class="lead-stanza">
+      August unfolded in small pieces.<br>
+      Some were shared. Some were quiet.<br>
+      Some simply caught your attention enough to stay with you.
+    </div>
+
+    <!-- BOLDER/LARGER HEADING 1 -->
+    <div class="section-header-bold">What You Noticed</div>
+
+    <!-- 1. HERO PHOTO: FAMILY SELFIE (CENTERED) -->
+    <div class="grid-item align-center">
+      <div class="aperture-frame frame-hero">
+        <img src="https://i.postimg.cc/9FZwqvBn/PHOTO-2026-08-08-14-58-39.jpg" alt="Family Selfie with Face Paint">
+      </div>
+      <p class="tagline" style="text-align: center;">Unhurried afternoon connection.</p>
+    </div>
+
+    <!-- 2. PHOTO: PLUM TUBS (STAGGERED LEFT) -->
+    <div class="grid-item align-left">
+      <div class="aperture-frame frame-portrait">
+        <img src="https://i.postimg.cc/XvHrb3Vj/PHOTO-2026-08-13-09-48-29.jpg" alt="Tubs of Toffee Plums and Tkemali">
+      </div>
+      <p class="tagline">Generosity held in glass.</p>
+    </div>
+
+    <!-- 3. PHOTO: GARDEN MUG (STAGGERED RIGHT) -->
+    <div class="grid-item align-right">
+      <div class="aperture-frame frame-square">
+        <img src="https://i.postimg.cc/MTgXnDMh/PHOTO-2026-08-11-12-02-31.jpg" alt="Coffee Mug in Garden">
+      </div>
+      <p class="tagline" style="text-align: right;">Morning sun, solitary pause.</p>
+    </div>
+
+    <!-- THREADS SECTION (POSITIONED ABOVE PROSE) -->
+    <div class="threads-block">
+      <div class="section-header-bold" style="margin-bottom: 0;">Threads Throughout Your Month</div>
+      <div class="framed-box">
+        <div class="star-accent">✦</div>
+        <div class="framed-words">CONNECTION &nbsp;•&nbsp; PAUSE &nbsp;•&nbsp; CURIOSITY &nbsp;•&nbsp; APPRECIATION</div>
+      </div>
+    </div>
+
+    <!-- BOLDER/LARGER HEADING 2 -->
+    <div class="section-header-bold">A Closer Look</div>
+    
+    <div class="editorial-prose">
+      <p>
+        Across the month your attention landed on very different things. Time with the people closest to you. A coffee in the garden. Plums prepared and put away - a little taste of summer, and a reminder that care (and feeling appreciated) can be found in simple things.
+      </p>
+      <p>
+        Not forgetting those moments where being noticed by others seemed to stay with you - a reminder that appreciation can sometimes be felt deeply by the way it catches us by surprise.
+      </p>
+      <p>
+        There were also Moments that invited a pause in a different way. A stop sign prompted questions about stopping, appreciating and overthinking. Taking time to listen revealed just how much was happening in the natural world around you.
+      </p>
+      <p>
+        Placed alongside one another, these Moments don't need to tell one single story. They do show the variety of things that caught your attention when you took a moment to notice.
+      </p>
+      <p>
+        Perhaps that is what they have in common: each one was something you chose to pause for before moving on.
+      </p>
+    </div>
+
+    <!-- 4. PHOTO: STOP SIGN (STAGGERED LEFT) -->
+    <div class="grid-item align-left">
+      <div class="aperture-frame frame-portrait">
+        <img src="https://i.postimg.cc/RhfhKHwG/PHOTO-2026-08-23-20-51-29.jpg" alt="Street Stop Sign">
+      </div>
+      <p class="tagline">A quiet signal to refrain from overthinking.</p>
+    </div>
+
+    <!-- 5. PHOTO: RAINBOW (PANORAMIC HERO) -->
+    <div class="grid-item align-center">
+      <div class="aperture-frame frame-rainbow-hero">
+        <img src="https://i.postimg.cc/J7BG99S5/PHOTO-2026-08-27-10-09-22.jpg" alt="Rainbow Sky over Skylines">
+      </div>
+      <p class="tagline" style="text-align: center;">Dusk arc over rooftops.</p>
+    </div>
+
+    <!-- POETIC CLOSING -->
+    <div class="section-header-bold" style="margin-top: 35px;">Your Month, In Reflection</div>
+    
+    <div class="poetic-closing">
+      <div class="poetic-stanza">
+        In a month filled with busy routines,<br>
+        you kept finding reasons to turn towards what mattered.
+      </div>
+
+      <div class="poetic-stanza">
+        A conversation. A gesture of warmth.<br>
+        A pause in the sun.
+      </div>
+
+      <div class="poetic-stanza">
+        Sometimes you looked more closely.<br>
+        Sometimes you stopped.<br>
+        Sometimes you simply noticed what was already there.
+      </div>
+
+      <div class="poetic-stanza">
+        Perhaps there is no need for these Moments<br>
+        to amount to anything more than that.
+      </div>
+
+      <div class="poetic-stanza" style="font-style: italic; opacity: 0.95;">
+        They were part of your August, and you chose to keep them.
+      </div>
+
+      <div class="gold-dot-pause">•</div>
+
+      <div class="closing-question-large">What might you notice next?</div>
+    </div>
+
+    <!-- REFINED ARCHIVAL FOOTER -->
+    <div class="archival-footer">
+      <span>MyMemoryMe</span>
+      <span>LIFE-LIGHT</span>
+      <span>ARCHIVED</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
