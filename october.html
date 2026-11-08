@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>October Life-Light | Lauren</title>
+
+  <!-- WhatsApp & Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="October Life-Light | Lauren">
+  <meta property="og:description" content="October brought a few unexpected turns. Some moments made you smile, some made you think, and some reminded you that things aren’t always quite what they first seem.">
+  <meta property="og:image" content="c8b3d23d-3e1b-4113-878c-6c1c208e1c6a.JPG">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-linen: #FCFAF7;
+      --glow-primrose-core: #FFF5D6;
+      --glow-primrose-outer: #FFFDF0;
+      --glow-dawn-blue: rgba(215, 228, 240, 0.4);
+      --text-charcoal: #1C1A1A;
+      --hairline-stone: #D8D5CE;
+      --accent-gold: #C5A059;
+      --shadow-sepia: rgba(45, 43, 42, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-linen);
+      background-image: 
+        radial-gradient(circle at 95% 2%, var(--glow-primrose-core) 0%, var(--glow-primrose-outer) 35%, transparent 70%),
+        radial-gradient(circle at 5% 98%, var(--glow-dawn-blue) 0%, transparent 55%);
+      background-attachment: fixed;
+      color: var(--text-charcoal);
+      font-family: "Libre Baskerville", "Baskerville", "Georgia", serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      justify-content: center;
+      padding: 70px 20px 100px 20px;
+    }
+
+    .life-light-container {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .edition-stamp {
+      font-family: "Jost", sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 12px;
+    }
+
+    .main-title {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+    }
+
+    .lead-stanza {
+      font-size: 1.05rem;
+      line-height: 2.1;
+      font-style: italic;
+      font-weight: 400;
+      max-width: 440px;
+      opacity: 0.9;
+      margin-bottom: 85px;
+    }
+
+    .section-header-bold {
+      font-family: "Jost", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-charcoal);
+      margin-bottom: 45px;
+      opacity: 0.95;
+    }
+
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 65px;
+      width: 100%;
+    }
+
+    .grid-item.align-center { align-items: center; }
+    .grid-item.align-left { align-items: flex-start; }
+    .grid-item.align-right { align-items: flex-end; }
+
+    .aperture-frame {
+      background-color: #FFFFFF;
+      padding: 12px;
+      border: 1px solid var(--bg-linen);
+      box-shadow: 2px 4px 12px var(--shadow-sepia);
+    }
+
+    .frame-hero { width: 100%; }
+    .frame-portrait { width: 80%; }
+    .frame-square { width: 75%; }
+    .frame-compact { width: 70%; }
+
+    .aperture-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .tagline {
+      font-size: 0.92rem;
+      font-style: italic;
+      margin-top: 14px;
+      opacity: 0.85;
+      max-width: 85%;
+      line-height: 1.5;
+    }
+
+    .threads-block {
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 85px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .framed-box {
+      width: 100%;
+      max-width: 500px;
+      border-top: 1px solid var(--hairline-stone);
+      border-bottom: 1px solid var(--hairline-stone);
+      padding: 28px 12px;
+      margin-top: 35px;
+      position: relative;
+    }
+
+    .star-accent {
+      font-size: 0.7rem;
+      color: var(--accent-gold);
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--bg-linen);
+      padding: 0 14px;
+      opacity: 0.85;
+    }
+
+    .framed-words {
+      font-family: "Jost", sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-charcoal);
+      opacity: 0.9;
+      line-height: 1.8;
+      word-spacing: 0.15em;
+    }
+
+    .editorial-prose {
+      font-size: 0.98rem;
+      line-height: 1.95;
+      font-weight: 400;
+      text-align: left;
+      padding: 0 10px;
+      margin-bottom: 85px;
+    }
+
+    .editorial-prose p { 
+      margin-bottom: 24px; 
+    }
+
+    .sub-thread-title {
+      font-family: "Jost", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    .poetic-closing {
+      font-size: 1.02rem;
+      line-height: 2.1;
+      font-weight: 400;
+      text-align: center;
+      max-width: 460px;
+    }
+
+    .poetic-stanza {
+      margin-bottom: 30px;
+    }
+
+    .gold-dot-pause {
+      color: var(--accent-gold);
+      font-size: 0.8rem;
+      margin: 40px 0;
+      opacity: 0.85;
+    }
+
+    .closing-question-large {
+      font-style: italic;
+      font-size: 1.4rem;
+      font-weight: 400;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    .archival-footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      margin-top: 80px;
+      font-family: "Jost", sans-serif;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      opacity: 0.45;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="life-light-container">
+
+    <div class="edition-stamp">LIFE-LIGHT BY LAUREN</div>
+    <h1 class="main-title">OCTOBER 2026</h1>
+
+    <div class="lead-stanza">
+      October brought a few unexpected turns.<br>
+      Some moments made you smile.<br>
+      Some made you think.<br>
+      And some reminded you that things aren’t always quite what they first seem.
+    </div>
+
+    <div class="section-header-bold">What You Noticed</div>
+
+    <!-- 1. Street-art pigeon -->
+    <div class="grid-item align-center">
+      <div class="aperture-frame frame-hero">
+        <img src="c8b3d23d-3e1b-4113-878c-6c1c208e1c6a.JPG" alt="Street-art pigeon">
+      </div>
+      <p class="tagline" style="text-align: center;">A little light on a difficult day.</p>
+    </div>
+
+    <!-- 2. Jess carving pumpkin -->
+    <div class="grid-item align-left">
+      <div class="aperture-frame frame-portrait">
+        <img src="a84b1a71-b953-4479-af92-b9b1204e204d.JPG" alt="Jess carving her pumpkin">
+      </div>
+      <p class="tagline">The quiet determination to do it yourself.</p>
+    </div>
+
+    <!-- 3. Pink Pony Club / Adam -->
+    <div class="grid-item align-right">
+      <div class="aperture-frame frame-square">
+        <img src="bdc5975e-0509-4aec-bef1-02b4023221f1.JPG" alt="Pink Pony Club / Adam singing">
+      </div>
+      <p class="tagline" style="text-align: right;">Songs come with their own memories.</p>
+    </div>
+
+    <!-- Threads -->
+    <div class="threads-block">
+      <div class="section-header-bold" style="margin-bottom: 0;">Threads Throughout Your Month</div>
+      <div class="framed-box">
+        <div class="star-accent">✦</div>
+        <div class="framed-words">PERSPECTIVE &nbsp;•&nbsp; CONNECTION &nbsp;•&nbsp; HUMOUR &nbsp;•&nbsp; APPRECIATION</div>
+      </div>
+    </div>
+
+    <div class="section-header-bold">A Closer Look</div>
+    
+    <div class="editorial-prose">
+      <p>
+        There were several moments this month that invited you to look again. A bottle you’d thought was an unnecessary, unsustainable purchase became a welcome rescue when you’d forgotten your own. And the compliments you received prompted a quiet reflection on the gap between how others see you and what feels truly meaningful within. Perhaps the lesson isn’t to take every first impression at face value, but to leave a little room for another perspective.
+      </p>
+
+      <div class="sub-thread-title">PERSPECTIVE</div>
+
+      <p>
+        Connection showed up in lots of different ways. Your WW group made you feel valued when you shared your story. Your team rallied round when the coffee beans ran out, bringing warmth to a dreary day in York. At home, a song at the gym brought Adam straight to mind, while Ben’s words about your pancakes gave you a moment of uncomplicated happiness. Different gestures, but each a reminder of how much people can mean to one another.
+      </p>
+
+      <div class="sub-thread-title">CONNECTION</div>
+
+      <p>
+        There was plenty of laughter, too. A mischievous Tesla prank, Jess’s humour, some truly terrible school photos, and a pigeon mural that managed to lift a difficult day. These weren’t necessarily big events, but they mattered. They gave you a reason to pause, smile, and find a little lightness in the everyday.
+      </p>
+
+      <div class="sub-thread-title">HUMOUR</div>
+
+      <p>
+        And amongst all of this, there were moments of appreciation: Jess’s perseverance with her pumpkin, Ben’s affection expressed through pancakes, and the barista whose compliment felt so good because it spoke to something you value. Perhaps being seen isn’t always about how you look. Sometimes it’s about feeling that the person others see is someone you recognise, too.
+      </p>
+
+      <div class="sub-thread-title">APPRECIATION</div>
+    </div>
+
+    <div class="section-header-bold">More Moments to Keep</div>
+
+    <!-- 4. Ben by the fire -->
+    <div class="grid-item align-left">
+      <div class="aperture-frame frame-portrait">
+        <img src="04658285-95ac-4db0-ae51-d2d2bad97b91.JPG" alt="Ben by the fireplace">
+      </div>
+      <p class="tagline">Your son’s lovely appreciation.</p>
+    </div>
+
+    <!-- 5. Water bottle -->
+    <div class="grid-item align-right">
+      <div class="aperture-frame frame-square">
+        <img src="a4d61cf2-ccde-43aa-a44c-792660148801.JPG" alt="Water bottle">
+      </div>
+      <p class="tagline" style="text-align: right;">Not everything is as it first seems.</p>
+    </div>
+
+    <!-- 6. Travel mug -->
+    <div class="grid-item align-center">
+      <div class="aperture-frame frame-compact">
+        <img src="9da688aa-5d15-4669-aa71-b7079b79d540.JPG" alt="Starbucks travel mug">
+      </div>
+      <p class="tagline" style="text-align: center;">A compliment that stayed with you.</p>
+    </div>
+
+    <!-- Closing -->
+    <div class="section-header-bold" style="margin-top: 35px;">Your Month, In Reflection</div>
+    
+    <div class="poetic-closing">
+      <div class="poetic-stanza">
+        Somewhere between the pigeon on a difficult day<br>
+        and the song that takes you back to Adam<br>
+        singing in the kitchen…
+      </div>
+
+      <div class="poetic-stanza">
+        October found its way into the little things.<br>
+        Jess’s determination.<br>
+        Ben’s words about your pancakes.<br>
+        A water bottle that proved rather more useful<br>
+        than you expected.<br>
+        And a compliment that made you feel seen<br>
+        in a way that truly mattered.
+      </div>
+
+      <div class="poetic-stanza">
+        There was laughter.<br>
+        Kindness.<br>
+        And a few changes of perspective along the way.
+      </div>
+
+      <div class="poetic-stanza">
+        Perhaps that’s what October leaves you with:<br>
+        the reminder that the everyday is full of things<br>
+        we might easily overlook.<br>
+        The people who make us smile.<br>
+        The moments that shift how we see something.<br>
+        The small details that remind us what matters.
+      </div>
+
+      <div class="gold-dot-pause">•</div>
+
+      <div class="closing-question-large">What has October helped you see differently?</div>
+    </div>
+
+    <div class="archival-footer">
+      <span>MyMemoryMe</span>
+      <span>LIFE-LIGHT</span>
+      <span>ARCHIVED</span>
+    </div>
+
+  </div>
+
+</body>
+</html>
